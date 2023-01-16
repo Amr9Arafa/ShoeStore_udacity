@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="shoe"
+            type="com.udacity.shoestore.models.Shoe" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LoginFragment">
+
+        <TextView
+            android:id="@+id/shoe_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin"
+            android:gravity="start"
+            android:padding="@dimen/small_padding"
+            android:text="@string/shoe_name_d"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/shoe_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_margin"
+            android:ems="10"
+            android:gravity="start"
+            android:hint="@string/shoe_name_d"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/medium_padding"
+            android:text="@={shoe.name}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_name_tv" />
+
+        <TextView
+            android:id="@+id/shoe__company_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:gravity="start"
+            android:padding="@dimen/small_padding"
+            android:text="@string/shoe_company_d"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_name_et" />
+
+        <EditText
+            android:id="@+id/shoe__company_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_margin"
+            android:ems="10"
+            android:gravity="start"
+            android:padding="@dimen/medium_padding"
+            android:text="@={shoe.company}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintTop_toBottomOf="@+id/shoe__company_name_tv" />
+
+        <TextView
+            android:id="@+id/shoe_size_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:gravity="start"
+            android:padding="@dimen/small_padding"
+            android:text="@string/shoe_size_d"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@+id/shoe__company_name_et" />
+
+        <EditText
+            android:id="@+id/shoe_size_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_margin"
+            android:ems="10"
+            android:gravity="start"
+            android:hint="@string/shoe_size_d"
+            android:padding="@dimen/medium_padding"
+            android:text="@={ `` + shoe.size}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_size_tv" />
+
+        <TextView
+            android:id="@+id/shoe_description_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/small_margin"
+            android:gravity="start"
+            android:padding="@dimen/small_padding"
+            android:text="@string/shoe_description_d"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_size_et" />
+
+        <EditText
+            android:id="@+id/shoe_description_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/small_margin"
+            android:ems="10"
+            android:gravity="start"
+            android:hint="@string/shoe_description_d"
+            android:padding="@dimen/medium_padding"
+            android:text="@={shoe.description}"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_description_tv" />
+
+        <Button
+            android:id="@+id/save_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/medium_margin"
+            android:background="@drawable/round_pink_button"
+            android:padding="@dimen/small_padding"
+            android:text="@string/add_shoe"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shoe_description_et" />
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/medium_margin"
+            android:background="@drawable/round_pink_button"
+            android:padding="@dimen/small_padding"
+            android:text="@string/cancel"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/save_btn" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

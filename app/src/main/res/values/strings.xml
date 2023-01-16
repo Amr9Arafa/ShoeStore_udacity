@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="welcome">Welcome !</string>
+    <string name="to_instructions">To Instructions</string>
+    <string name="go_to_store">Go To Store</string>
+    <string name="happy_to_see_you_again">Happy to see you again</string>
+    <string name="shoes_list">shoes list</string>
+    <string name="ultraboost">UltraBoost</string>
+    <string name="adidas">Adidas</string>
+    <string name="size_43">Size: 43</string>
+    <string name="shoe_description">Performance or style? These adidas X9000L4 running shoes give you a little bit of both</string>
+    <string name="add_shoe">Add New Shoe</string>
+    <string name="shoe_name_d">Shoe Name</string>
+    <string name="shoe_company_d">Shoe Company</string>
+    <string name="shoe_size_d">shoe Size</string>
+    <string name="shoe_description_d">Shoe Description</string>
+    <string name="cancel">Cancel</string>
+    <string name="logout">logout</string>
+</resources>
